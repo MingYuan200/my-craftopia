@@ -54,12 +54,16 @@ a {
 } /* reset END*/
 /* 頁首區 */
 #topbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 20px 50px;
 }
-#topbar > button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
+#topbar .menu {
+  display: flex;
+  align-items: center;
+}
+#topbar .menu li {
+  margin-left: 10px;
 }/*# sourceMappingURL=styles.css.map */

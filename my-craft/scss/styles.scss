@@ -2,13 +2,24 @@
 
 /* 頁首區 */
 #topbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 20px 50px;
 
-    > button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    outline: none;
+
+    .menu {
+        display: flex;
+        align-items: center;
+
+        li {
+            margin-left: 10px;
+        }
     }
+}
+
+#banner {
+
+
 }
