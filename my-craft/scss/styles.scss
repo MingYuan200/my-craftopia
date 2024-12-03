@@ -1,0 +1,14 @@
+@use 'reset';
+
+/* 頁首區 */
+#topbar {
+    display: flex;
+    justify-content: space-between;
+
+    > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    }
+}

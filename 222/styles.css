@@ -139,20 +139,16 @@ a {
 
 .banner {
     width: 100%;
-    height: 150px;
-    background-image: url(./images/會員相關.jpg);
-    background-size: cover;
-    align-content: end;
+    height: 100px;
+    /* position: relative; */
+
+
 }
 
 .bg-img {
     width: 100%;
-    height: 10vh;
-    background-image: url(./images/BG-img-過度邊緣.png);
-    background-size: contain;
-
-    /* position: absolute;
-    top: 100px; */
+    height: auto;
+    /* position: absolute; */
 }
 
 h2 {
@@ -167,7 +163,7 @@ h2 {
 }
 
 .member-QA-left {
-    background-color: #999;
+    background-color: #d3d3d3;
     flex: 1;
     margin: 10px;
     padding: 10px;
