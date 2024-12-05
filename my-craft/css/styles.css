@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Braah+One&family=Noto+Sans+TC:wght@100..900&display=swap");
 /* 標籤重置區 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -52,6 +53,12 @@ a {
   color: #333;
   text-decoration: none;
 } /* reset END*/
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
 /* 頁首區 */
 #topbar {
   position: fixed;
@@ -83,71 +90,206 @@ a {
   width: 100%;
 }
 
-.content {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 0 80px;
-  background-image: url(/images/BG-img-foot.png);
-}
-.content .member-QA-left {
-  border: 1px solid tomato;
-  margin-right: 150px;
-  padding: 10px;
-  min-width: 200px;
+/* 內容區 */
+.content-bg {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 200px;
+  background-image: url(/images/BG-img-foot.png);
+  background-size: cover;
+}
+
+.bread2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 70%;
+  max-width: 1000px;
+  font-size: 0.8rem;
+  padding-left: 8px;
+  margin-bottom: 60px;
+}
+.bread2 > img {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  margin: 0px 6px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+  max-width: 1000px;
+  gap: 150px;
+  /* 左邊導引欄 */
+  /* 問答區 */
+}
+.content .member-QA-left {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+.content .member-QA-left li {
+  margin-top: 10px;
 }
 .content .member-QA-left .left-list {
   display: flex;
-  margin: 8px 0;
+  margin: 8px;
+  width: 100%;
+  position: relative;
 }
 .content .member-QA-left .left-list img {
   width: 24px;
   height: 24px;
   margin-right: 12px;
 }
-.content .member-QA-right {
-  border: 1px solid tomato;
+.content .member-QA-left .left-list::after {
+  content: "";
+  background-image: url(/images/Vector-line.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
 }
-.content .member-QA-right #title {
+.content .member-QA-left .decoLine {
+  margin: 8px 0;
+}
+.content .member-QA-right {
+  width: 100%;
+}
+.content .member-QA-right .title {
+  margin-bottom: 40px;
+}
+.content .member-QA-right .title img {
   height: 40px;
 }
 .content .member-QA-right .list-row,
-.content .member-QA-right .list-row2 {
+.content .member-QA-right .list-row-light {
   display: flex;
   margin: 24px 0;
+  gap: 48px;
 }
 .content .member-QA-right .list-row .quest-mark,
-.content .member-QA-right .list-row2 .quest-mark {
+.content .member-QA-right .list-row-light .quest-mark {
   font-weight: bolder;
   font-size: 20px;
-  background-color: #B07662;
+  background-color: #D4AB8E;
   border-radius: 99px;
   width: 50px;
   height: 50px;
   text-align: center;
   line-height: 50px;
-  margin-right: 48px;
 }
-.content .member-QA-right .list-row .question,
-.content .member-QA-right .list-row2 .question {
+.content .member-QA-right .list-row .QAset,
+.content .member-QA-right .list-row-light .QAset {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.content .member-QA-right .list-row .QAset .question,
+.content .member-QA-right .list-row-light .QAset .question {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 700px;
-  background-color: #B07662;
+  width: 100%;
+  background-color: #D4AB8E;
   border-radius: 10px;
   padding: 10px 16px 10px 32px;
+  cursor: pointer;
 }
-.content .member-QA-right .list-row .question img,
-.content .member-QA-right .list-row2 .question img {
+.content .member-QA-right .list-row .QAset .question .icon-arrow,
+.content .member-QA-right .list-row-light .QAset .question .icon-arrow {
   width: 30px;
   height: 30px;
-  margin: 0px 6px;
+  margin-left: 60px;
 }
-.content .member-QA-right .list-row2 .quest-mark,
-.content .member-QA-right .list-row2 .question {
+.content .member-QA-right .list-row .QAset .answer,
+.content .member-QA-right .list-row-light .QAset .answer {
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  padding: 20px 42px 36px 42px;
+  position: relative;
+  font-weight: 400;
+}
+.content .member-QA-right .list-row .QAset .answer::before,
+.content .member-QA-right .list-row-light .QAset .answer::before {
+  content: "";
+  position: absolute;
+  /* 與白色背景的間距 */
+  top: 0px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px dashed #D4AB8E;
+  border-top: none;
+  /* 虛線樣式 */
+  border-radius: 0 0 10px 10px;
+}
+.content .member-QA-right .list-row-light .quest-mark {
   background-color: #F0E4C6;
+}
+.content .member-QA-right .list-row-light .QAset .question {
+  background-color: #F0E4C6;
+}
+.content .member-QA-right .list-row-light .QAset .answer::before {
+  border-color: #F0E4C6;
+}
+
+/* 頁尾區 */
+footer {
+  background-color: #483D3F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer-bgDeco {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+footer .footer-bgDeco img {
+  position: absolute;
+  bottom: -1px;
+}
+footer .foot-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 50px 100px;
+}
+footer .foot-content img {
+  width: 338px;
+  height: 72px;
+}
+footer .menu {
+  display: flex;
+  text-align: center;
+}
+footer .menu > li {
+  width: 6rem;
+  margin: 0 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+footer .menu > li ul {
+  margin: 15px 0;
+}
+footer .menu > li ul > li {
+  padding: 4px 0;
+}
+footer a,
+footer li,
+footer small {
+  color: white;
+}
+footer small {
+  margin-bottom: 50px;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=styles.css.map */
