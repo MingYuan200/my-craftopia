@@ -88,16 +88,29 @@
                 </div>
                 <!-- 修改密碼 -->
                 <div class="password">
+                    <!-- 標題 -->
                     <div class="title">
                         <h2><img src="./images/修改密碼.svg" alt=""></h2>
-                        <img class="icon-edit" src="./images/type=edit.svg" alt="">
+                        <button class="password-btn">修改密碼</button>
                     </div>
-                    <div class="dataBox">
-                        <div class="data">
-                            <p>姓名</p>
-                            <p class="data-text">王曉明</p>
-                        </div>
-                    </div>
+                    <!-- 表單 -->
+                    <form action="" method="post" name="member-form" id="password-form" title="會員資料修改">
+
+                        <label for="passWord">*請輸入舊密碼：</label>
+                        <input type="text" name="passWord" id="passWord" title="請輸入舊密碼" placeholder="請輸入6-8混合字元" required maxlength="8">
+                
+                        <label for="passWord">*請輸入新密碼：</label>
+                        <input type="text" name="passWord" id="passWord" title="請輸入新密碼" placeholder="請輸入6-8混合字元" required maxlength="8">
+                
+                        <label for="passWord-2">*再次確認新密碼</label>
+                        <input type="text" name="passWord-2" id="passWord-2" title="再次確認新密碼" placeholder="請輸入6-8混合字元" required
+                            maxlength="8">
+
+                    </form>
+                    <!-- 確認按鈕 -->
+                    <button class="password-btn">確認密碼</button>
+                    <button class="password-btn">取消</button>
+                    
                 </div>
             </div>
 

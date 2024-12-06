@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #member-form>* {
+            display: block;
+        }
+
+        #member-form label {
+            margin-top: 20px;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 搜尋欄位 -->
+    <form action="" method="post" name="search-form" id="search-form" title="搜尋表單">
+        <label for="search">搜尋：</label>
+        <input type="search" name="search" id="search" title="搜尋欄位" placeholder="Type anything">
+        <input type="submit" name="search-btn" id="search-btn" title="提交按鈕" value="搜尋">
+    </form>
+    <hr>
+
+    <!-- 會員資料修改 -->
+    <h2>會員資料修改</h2>
+    <form action="" method="post" name="member-form" id="member-form" title="會員資料修改">
+        <label for="userName">*姓名：</label>
+        <input type="text" name="userName" id="userName" title="姓名" placeholder="請輸入姓名" required>
+
+        <label for="account">*帳號：(禁用)</label>
+        <input type="text" name="account" id="account" title="帳號" value="mm333" required disabled>
+
+        <label for="userId">*身分證字號：(只讀) readonly</label>
+        <input type="text" name="userId" id="userId" title="身分證字號" value="" maxlength="10">
+
+        <label for="email">*E-mail：</label>
+        <input type="text" name="email" id="email" title="信箱" placeholder="請輸入信箱" required>
+
+        <label for="tel">聯絡電話：</label>
+        <input type="text" name="tel" id="tel" title="聯絡電話" placeholder="請輸入聯絡電話">
+
+        <label for="passWord">*重設密碼：</label>
+        <input type="text" name="passWord" id="passWord" title="重設密碼" placeholder="請輸入6-8混合字元" required maxlength="8">
+
+        <label for="passWord-2">*再次確認密碼</label>
+        <input type="text" name="passWord-2" id="passWord-2" title="再次確認密碼" placeholder="請輸入6-8混合字元" required
+            maxlength="8">
+
+        <label for="birthday">生日:</label>
+        <input type="date" name="birthday" id="birthday">
+
+        <label for="file">上傳檔案：</label>
+        <input type="file" name="file" id="file" multiple>
+        <small>*僅可上傳：jpg、gif、png、pdf檔案類型(一定要設定限制，以免有病毒檔案)</small>
+
+        <!-- 下拉選單 -->
+        <label for="sex">性別：</label>
+        <select name="sex" id="sex" title="性別">
+            <option value="">請選擇</option>
+            <option value="生理女">生理女 ♀</option>
+            <option value="生理男">生理男 ♂</option>
+        </select>
+
+        <label for="other">其他類別：</label>
+        <select name="other" id="other" title="其他類別">
+            <option value="">請選擇</option>
+            <optgroup label="分類一">
+                <option value="熱美式">熱美式</option>
+                <option value="冰拿鐵">冰拿鐵</option>
+            </optgroup>
+            <optgroup label="分類二">
+                <option value="布丁">布丁</option>
+                <option value="提拉米蘇">提拉米蘇</option>
+                <option value="薑汁豆花">薑汁豆花</option>
+            </optgroup>
+        </select>
+
+
+        <br>
+        <fieldset> <!--  fieldest有預設樣式  -->
+            <legend>會員類型：<span style="font-size: 14px;">*同一組的選項name名稱要相同 => 就只能單選且不能取消</span></legend>
+            <input type="radio" name="member" id="member1" title="金卡會員" value="金卡會員">
+            <label for="member1">金卡會員</label>
+
+            <input type="radio" name="member" id="member2" title="銀卡會員" value="銀卡會員">
+            <label for="member2">銀卡會員</label>
+
+            <input type="radio" name="member" id="member3" title="黑卡會員" value="黑卡會員">
+            <label for="member3">黑卡會員</label>
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>可複選的類型，但不能取消選取：</legend>
+            <input type="radio" name="member1" id="member-1" title="金卡會員" value="金卡會員">
+            <label for="member-1">金卡會員</label>
+
+            <input type="radio" name="member2" id="member-2" title="銀卡會員" value="銀卡會員">
+            <label for="member-2">銀卡會員</label>
+
+            <input type="radio" name="member3" id="member-3" title="黑卡會員" value="黑卡會員">
+            <label for="member-3">黑卡會員</label>
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>可複選的類型，可以取消選取：</legend>
+            <input type="checkbox" name="order" id="member--1" title="喜劇" value="喜劇">
+            <label for="member--1">喜劇</label>
+
+            <input type="checkbox" name="order" id="member--2" title="相聲" value="相聲">
+            <label for="member--2">相聲</label>
+
+            <input type="checkbox" name="order" id="member--3" title="紀錄片" value="紀錄片">
+            <label for="member--3">紀錄片</label>
+        </fieldset>
+
+        <label for="message">留言板：</label>
+        <textarea name="message" id="message" rows="6"></textarea>
+        <div>
+            <input type="reset" name="reset-btn" id="reset-btn" value="重設資料">
+            <input type="submit" name="submit-btn" id="submit-btn" value="送出資料">
+        </div>
+
+        <small>*此表單為練習作品，不具有收集資料的功能。不具有商業行為。非正式網站</small>
+    </form>
+</body>
+
+</html>

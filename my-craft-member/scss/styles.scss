@@ -98,8 +98,9 @@ section {
 
 /* 會員資料區 */
 #member {
-height: 100%;
-padding: 150px 0;
+    height: 100%;
+    padding: 150px 0;
+
     .memberWrap {
         display: flex;
         justify-content: center;
@@ -109,7 +110,7 @@ padding: 150px 0;
         gap: 120px;
         width: 80%;
         max-width: 1000px;
-    
+
         /* 編輯按鈕統一設定 */
         .icon-edit {
             width: 24px;
@@ -117,15 +118,15 @@ padding: 150px 0;
             margin-left: 10px;
             cursor: pointer;
         }
-    
+
         .title {
             margin: 24px 0;
             display: flex;
             align-items: center;
             gap: 14px;
         }
-    
-    
+
+
         /* 會員簡歷 */
         .resume {
             // border: 1px solid #483D3F;
@@ -133,12 +134,12 @@ padding: 150px 0;
             flex-direction: column;
             align-items: center;
             // gap: 40px;
-    
-    
+
+
             .avatar {
                 position: relative;
                 margin: 40px;
-    
+
                 .camera {
                     width: 50px;
                     height: 50px;
@@ -146,56 +147,56 @@ padding: 150px 0;
                     position: absolute;
                     bottom: 0;
                     right: 0;
-    
+
                     background-color: #E3E3E3;
                     border-radius: 50%;
                     cursor: pointer;
-    
+
                     >img {
                         width: 100%;
                         object-fit: contain;
                     }
                 }
-    
+
                 .ava-photo {
                     width: 160px;
                     height: 160px;
                     border-radius: 50%;
                     overflow: hidden;
                     border: 3px solid #E3E3E3;
-    
+
                     >img {
                         width: 100%;
                         object-fit: cover;
                     }
                 }
             }
-    
+
             .name-default {
                 font-size: 1.5rem;
                 font-weight: 700;
                 display: flex;
                 align-items: center;
-    
+
                 margin-bottom: 40px;
-    
+
             }
-    
+
             .member-level {
                 // background-color: antiquewhite;
                 padding: 33px 16px;
                 position: relative;
                 line-height: 170%;
-    
+
                 .level-count {
                     margin-top: 16px;
                 }
-    
+
                 span {
                     font-weight: 400;
                     color: #625759;
                 }
-    
+
                 &::before {
                     content: "";
                     background-image: url(../images/Vector-line.svg);
@@ -207,7 +208,7 @@ padding: 150px 0;
                     top: 0;
                     left: 0;
                 }
-    
+
                 &::after {
                     content: "";
                     background-image: url(../images/Vector-line.svg);
@@ -221,16 +222,16 @@ padding: 150px 0;
                 }
             }
         }
-    
+
         .information {
             width: 100%;
-    
+
             /* 會員基本資料 */
             .info {
                 // border: 1px solid #483D3F;
                 width: 100%;
-    
-    
+
+
                 .dataBox {
                     background-color: rgba(255, 255, 255, 0.65);
                     border-radius: 10px;
@@ -238,17 +239,17 @@ padding: 150px 0;
                     display: flex;
                     flex-direction: column;
                     gap: 12px;
-    
+
                     .data {
                         position: relative;
                         padding: 16px;
                         // margin-bottom: 20px;
-    
+
                         .data-text {
                             font-size: 1.2rem;
                             margin-top: 24px;
                         }
-    
+
                         &::after {
                             content: "";
                             background-image: url(../images/Vector-line2.svg);
@@ -262,22 +263,42 @@ padding: 150px 0;
                             left: -1px;
                         }
                     }
-    
-    
-    
-    
+
+
+
+
                 }
-    
+
             }
 
             .password {
                 margin-top: 80px;
+
+                >.title h2 {
+                    margin-right: 48px;
+                }
+
+                .password-btn {
+                    border: 0;
+                    color: white;
+                    background-color: #483D3F;
+                    font-size: 16px;
+                    padding: 14px 24px;
+                    border-radius: 99px;
+
+                    cursor: pointer;
+                }
+
+                #password-form {
+                    display: flex;
+                    flex-direction: column
+                }
             }
         }
-    
-    
+
+
     }
-    
+
 }
 
 
