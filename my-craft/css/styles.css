@@ -152,7 +152,7 @@ body {
 }
 .content .member-QA-left .left-list::after {
   content: "";
-  background-image: url(/images/Vector-line.svg);
+  background-image: url(../images/Vector-line.svg);
   background-repeat: no-repeat;
   width: 100%;
   height: 3px;
