@@ -291,7 +291,36 @@ section {
 
                 #password-form {
                     display: flex;
-                    flex-direction: column
+                    flex-direction: column;
+
+                    label {
+                        margin: 20px 0;
+                    }
+
+                    input,
+                    textarea {
+                        color: #483D3F;
+                        padding: 10px;
+                        border-radius: 6px;
+
+                        border: none;
+
+                        &::placeholder {
+                            color: #888;
+                        }
+
+                        &:focus {
+                            outline: 2px solid #483D3F;
+                            background-color: #feebba;
+                        }
+                    }
+
+                }
+
+                .confirm-btn {
+                    margin: 24px 0;
+                    display: flex;
+                    gap: 24px;
                 }
             }
         }

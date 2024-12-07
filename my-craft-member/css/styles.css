@@ -268,6 +268,30 @@ section {
   display: flex;
   flex-direction: column;
 }
+#member .memberWrap .information .password #password-form label {
+  margin: 20px 0;
+}
+#member .memberWrap .information .password #password-form input,
+#member .memberWrap .information .password #password-form textarea {
+  color: #483D3F;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+#member .memberWrap .information .password #password-form input::placeholder,
+#member .memberWrap .information .password #password-form textarea::placeholder {
+  color: #888;
+}
+#member .memberWrap .information .password #password-form input:focus,
+#member .memberWrap .information .password #password-form textarea:focus {
+  outline: 2px solid #483D3F;
+  background-color: #feebba;
+}
+#member .memberWrap .information .password .confirm-btn {
+  margin: 24px 0;
+  display: flex;
+  gap: 24px;
+}
 
 /* 頁尾區 */
 footer {
