@@ -264,6 +264,16 @@ section {
   border-radius: 99px;
   cursor: pointer;
 }
+#member .memberWrap .information .password .password-cancel {
+  border: 0;
+  color: #483D3F;
+  background-color: transparent;
+  border: 2px solid #483D3F;
+  font-size: 16px;
+  padding: 14px 24px;
+  border-radius: 99px;
+  cursor: pointer;
+}
 #member .memberWrap .information .password #password-form {
   display: flex;
   flex-direction: column;
@@ -293,12 +303,69 @@ section {
   gap: 24px;
 }
 
+/* 預約記錄區 */
+#reserve {
+  flex-direction: column;
+  gap: 24px;
+}
+#reserve .cards-long {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#reserve .cards-long .card-reserve {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 70%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#reserve .cards-long .card-reserve figure {
+  width: 30%;
+  height: 100%;
+  margin-right: 50px;
+}
+#reserve .cards-long .card-reserve figure > img {
+  object-fit: cover;
+  width: 100%;
+}
+#reserve .cards-long .card-reserve .txt {
+  padding: 24px;
+}
+#reserve .cards-long .card-reserve .txt .tag-state {
+  background-image: url(../images/upcoming.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 15px;
+  color: white;
+  font-size: 0.85rem;
+}
+#reserve .cards-long .card-reserve .txt h3 {
+  font-size: 1.25rem;
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+#reserve .cards-long .card-reserve .txt .class-item {
+  color: #B07662;
+  margin-top: 8px;
+}
+#reserve .cards-long .card-reserve .btn-reserve {
+  background-color: #483D3F;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 99px;
+}
+
 /* 頁尾區 */
 footer {
   background-color: #483D3F;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
 }
 footer .footer-bgDeco {
   position: relative;
