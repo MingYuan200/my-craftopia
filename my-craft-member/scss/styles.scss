@@ -1,4 +1,5 @@
 @use 'reset';
+@use 'keyframes';
 @import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Noto+Sans+TC:wght@100..900&display=swap');
 
 body {
@@ -270,6 +271,7 @@ section {
 
             }
 
+            // 修改密碼區
             .password {
                 margin-top: 80px;
 
@@ -301,7 +303,7 @@ section {
                 }
 
                 #password-form {
-                    display: flex;
+                    display: none;
                     flex-direction: column;
 
                     label {
@@ -330,8 +332,14 @@ section {
 
                 .confirm-btn {
                     margin: 24px 0;
-                    display: flex;
+                    display: none;
                     gap: 24px;
+                }
+
+                // 密碼交互
+                #password-form.show, .confirm-btn.show{
+                    display: flex;
+                    animation: show 0.8s both;
                 }
             }
         }

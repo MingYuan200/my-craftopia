@@ -1,0 +1,28 @@
+@keyframes show {
+    from {
+        transform: translateY(-20px);
+        /* 或其他適當的變換 */
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    from {
+        transform: translateY(0px);
+        opacity: 1;
+        display: flex;
+        /*動態顯示*/
+    }
+
+    to {
+        transform: translateY(20px);
+        opacity: 0;
+        display: none;
+        /*動態消失*/
+    }
+}
