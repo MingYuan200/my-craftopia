@@ -28,124 +28,163 @@
         </nav>
     </header>
 
-    <!-- 會員資料區 -->
-    <section id="member">
-        <div class="memberWrap">
-            <!-- 會員簡歷 -->
-            <div class="resume">
-                <div class="avatar">
-                    <div class="ava-photo">
-                        <img src="./images/member-avatar.svg" alt="">
-                    </div>
-                    <div class="camera">
-                        <img src="./images/type=camera.svg" alt="">
-                    </div>
-                </div>
 
-                <div class="name-default">
-                    <p>阿明</p>
-                    <img class="icon-edit" src="./images/type=edit.svg" alt="">
-                </div>
-                <!-- <div class="name-edit">
+    <main>
+        <!-- 會員資料區 -->
+        <section id="member">
+            <div class="memberWrap">
+                <!-- 會員簡歷 -->
+                <div class="resume">
+                    <div class="avatar">
+                        <div class="ava-photo">
+                            <img src="./images/member-avatar.svg" alt="">
+                        </div>
+                        <div class="camera">
+                            <img src="./images/type=camera.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="name-default">
+                        <p>阿明</p>
+                        <img class="icon-edit" src="./images/type=edit.svg" alt="">
+                    </div>
+                    <!-- <div class="name-edit">
                 <input type="text" value="阿明">
                 <button type="submit">完成</button>
             </div> -->
-                <div class="member-level">
-                    <p>等級：小俗投
-                        <br>
-                        <span>距離下個俗投還差 400 pt</span>
+                    <div class="member-level">
+                        <p>等級：小俗投
+                            <br>
+                            <span>距離下個俗投還差 400 pt</span>
+                        </p>
+                        <p class="level-count">累積點數: 100 pt</p>
+                    </div>
+
+                </div>
+                <div class="information">
+                    <!-- 會員基本資料 -->
+                    <div class="info">
+                        <div class="title">
+                            <h2><img src="./images/基本資料.svg" alt=""></h2>
+                            <img class="icon-edit" src="./images/type=edit.svg" alt="">
+                        </div>
+                        <div class="dataBox">
+                            <div class="data">
+                                <p>姓名</p>
+                                <p class="data-text">王曉明</p>
+                            </div>
+                            <div class="data">
+                                <p>電子信箱</p>
+                                <p class="data-text">armincraft@gmail.com</p>
+                            </div>
+                            <div class="data">
+                                <p>行動電話</p>
+                                <p class="data-text">0966-888-888</p>
+                            </div>
+                            <div class="data">
+                                <p>生日</p>
+                                <p class="data-text">未填寫</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- 修改密碼 -->
+                    <div class="password">
+                        <!-- 標題 -->
+                        <div class="title">
+                            <h2><img src="./images/修改密碼.svg" alt=""></h2>
+                            <button class="password-btn">修改密碼</button>
+                        </div>
+                        <!-- 表單 -->
+                        <form action="" method="post" name="member-form" id="password-form" title="會員資料修改">
+
+                            <label for="passWord">*請輸入舊密碼：</label>
+                            <input type="text" name="passWord" id="passWord" title="請輸入舊密碼" placeholder="請輸入6-8混合字元"
+                                required maxlength="8">
+
+                            <label for="passWord">*請輸入新密碼：</label>
+                            <input type="text" name="passWord" id="passWord" title="請輸入新密碼" placeholder="請輸入6-8混合字元"
+                                required maxlength="8">
+
+                            <label for="passWord-2">*再次確認新密碼</label>
+                            <input type="text" name="passWord-2" id="passWord-2" title="再次確認新密碼"
+                                placeholder="請輸入6-8混合字元" required maxlength="8">
+
+                        </form>
+                        <!-- 確認按鈕 -->
+                        <div class="confirm-btn">
+                            <button class="password-btn">確認密碼</button>
+                            <button class="password-cancel">取消</button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- 預約記錄區 -->
+        <section id="reserve">
+            <div class="title">
+                <h2><img src="./images/預約紀錄.svg" alt=""></h2>
+            </div>
+            <!-- 列表區 -->
+            <div class="reserve-cardsBox">
+                <!-- 訂單狀態:進行中 -->
+                <div class="reserve-row">
+                    <div class="rowIMG">
+                        <img src="./images/classIMG.jpg" alt="">
+                    </div>
+
+                    <div class="reserve-content">
+                        <div class="txt">
+                            <p class="tag-state">即將到來</p>
+                            <h3>聖誕禮物首選!皮革證件套組~適合初學者</h3>
+                            <p>12月07日(週六)13:30-15:30。成人1位</p>
+                            <p class="class-item">證件卡夾</p>
+                        </div>
+                        <button class="btn-reserve">修改訂單</button>
+                    </div>
+                    <!-- <div class="btn-reserve">
+                        <p>修改訂單</p>
+                    </div> -->
+
+                </div>
+                <!-- 訂單狀態:完成,多一個標籤finish -->
+                <div class="reserve-row finish">
+                    <div class="rowIMG">
+                        <img src="./images/classIMG.jpg" alt="">
+                    </div>
+                    <div class="reserve-content">
+                        <div class="txt">
+                            <p class="tag-state">已完成</p>
+                            <h3>聖誕禮物首選!皮革證件套組~適合初學者</h3>
+                            <p>12月07日(週六)13:30-15:30。成人1位</p>
+                            <p class="class-item">證件卡夾</p>
+                        </div>
+                        <button class="btn-reserve">分享心得</button>
+                    </div>
+                    <!-- <div class="btn-reserve">
+                        <p>修改訂單</p>
+                    </div> -->
+
+                </div>
+            </div>
+            <!-- 看全部按鈕 -->
+            <div class="btn-area">
+                <div class="btn-seeAll">
+                    <p>
+                        See All
                     </p>
-                    <p class="level-count">累積點數: 100 pt</p>
-                </div>
-
-            </div>
-            <div class="information">
-                <!-- 會員基本資料 -->
-                <div class="info">
-                    <div class="title">
-                        <h2><img src="./images/基本資料.svg" alt=""></h2>
-                        <img class="icon-edit" src="./images/type=edit.svg" alt="">
-                    </div>
-                    <div class="dataBox">
-                        <div class="data">
-                            <p>姓名</p>
-                            <p class="data-text">王曉明</p>
-                        </div>
-                        <div class="data">
-                            <p>電子信箱</p>
-                            <p class="data-text">armincraft@gmail.com</p>
-                        </div>
-                        <div class="data">
-                            <p>行動電話</p>
-                            <p class="data-text">0966-888-888</p>
-                        </div>
-                        <div class="data">
-                            <p>生日</p>
-                            <p class="data-text">未填寫</p>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- 修改密碼 -->
-                <div class="password">
-                    <!-- 標題 -->
-                    <div class="title">
-                        <h2><img src="./images/修改密碼.svg" alt=""></h2>
-                        <button class="password-btn">修改密碼</button>
-                    </div>
-                    <!-- 表單 -->
-                    <form action="" method="post" name="member-form" id="password-form" title="會員資料修改">
-
-                        <label for="passWord">*請輸入舊密碼：</label>
-                        <input type="text" name="passWord" id="passWord" title="請輸入舊密碼" placeholder="請輸入6-8混合字元"
-                            required maxlength="8">
-
-                        <label for="passWord">*請輸入新密碼：</label>
-                        <input type="text" name="passWord" id="passWord" title="請輸入新密碼" placeholder="請輸入6-8混合字元"
-                            required maxlength="8">
-
-                        <label for="passWord-2">*再次確認新密碼</label>
-                        <input type="text" name="passWord-2" id="passWord-2" title="再次確認新密碼" placeholder="請輸入6-8混合字元"
-                            required maxlength="8">
-
-                    </form>
-                    <!-- 確認按鈕 -->
-                    <div class="confirm-btn">
-                        <button class="password-btn">確認密碼</button>
-                        <button class="password-cancel">取消</button>
-                    </div>
-
+                    <img src="./images/type=arrowRight_bold.svg" alt="">
+                    <img class="seeAll-deco" src="./images/seeAll-dot.svg" alt="">
 
                 </div>
             </div>
-
-        </div>
-    </section>
-    <!-- 預約記錄區 -->
-    <section id="reserve">
-        <div class="title">
-            <h2><img src="./images/預約紀錄.svg" alt=""></h2>
-        </div>
-        <div class="cards-long">
-            <div class="card-reserve">
-                <figure>
-                    <img src="./images/classIMG.jpg" alt="">
-                </figure>
-                <div class="txt">
-                    <p class="tag-state">即將到來</p>
-                    <h3>聖誕禮物首選!皮革證件套組~適合初學者</h3>
-                    <p>12月07日(週六)13:30-15:30。成人1位</p>
-                    <p class="class-item">證件卡夾</p>
-                </div>
-                <p class="btn-reserve">修改訂單</p>
-            </div>
-        </div>
-        <div class="btn-seeAll">
-            <p>See All</p>
-        </div>
-    </section>
-    <section id="like"></section>
-    <section id="experience"></section>
+        </section>
+        <section id="like"></section>
+        <section id="experience"></section>
+    </main>
 
 
     <!-- 頁尾區 -->
