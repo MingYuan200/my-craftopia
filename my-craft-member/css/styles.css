@@ -140,7 +140,6 @@ main {
 
 section {
   width: 70%;
-  border: 1px dashed tomato;
   display: flex;
   flex-direction: column;
   margin-top: 160px;
@@ -186,11 +185,8 @@ section {
 /* 會員資料區 */
 #member .memberWrap {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 120px;
-  padding: 0 40px;
   /* 編輯按鈕統一設定 */
   /* 會員簡歷 */
 }
@@ -204,6 +200,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 20%;
 }
 #member .memberWrap .resume .avatar {
   position: relative;
@@ -281,7 +278,7 @@ section {
 #member .memberWrap .information .info .dataBox {
   background-color: rgba(255, 255, 255, 0.65);
   border-radius: 10px;
-  padding: 0px 20px 20px 20px;
+  padding: 20px 40px 40px 40px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -516,6 +513,22 @@ section {
 }
 
 /* 心得區 */
+#experience {
+  width: 100%;
+  max-width: none;
+  align-items: center;
+  background-image: url(../images/BG-img-share.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#experience .expWrapper {
+  width: 70%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin: 100px 0;
+}
 #experience .expTitle {
   display: flex;
   align-items: center;
@@ -529,17 +542,15 @@ section {
 #experience .expTitle .btn-area {
   margin-top: 0;
 }
-#experience .newestExp {
-  padding-bottom: 150px;
-}
 #experience .newestExp .Exp {
   height: 300px;
   display: flex;
-  margin: 30px 0;
+  margin: 30px 12px;
+  padding: 24px;
 }
 #experience .newestExp .Exp:hover {
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: #feebba;
   border-radius: 10px;
 }
 #experience .newestExp .Exp .expPic {
@@ -556,6 +567,8 @@ section {
 #experience .newestExp .Exp .expContent {
   margin-left: 65px;
   padding-top: 30px;
+  flex: 1;
+  padding-right: 20px;
 }
 #experience .newestExp .Exp .expContent .expInfo {
   display: flex;
@@ -578,6 +591,13 @@ section {
 }
 #experience .newestExp .Exp .expContent .expDate span {
   margin: 0 10px;
+}
+#experience .newestExp .Exp .expContent .expTxt {
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 /* 頁尾區 */
